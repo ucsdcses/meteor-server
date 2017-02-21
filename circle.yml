@@ -11,6 +11,6 @@ dependencies:
 test:
   override:
     - meteor reset
-    - meteor test --full-app --once --driver-package dispatch:mocha-phantomjs
+    - meteor test --full-app --once --driver-package dispatch:mocha
     - meteor npm run lint
     

@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
+const chai = require('chai');
+
 /**
  * Basic test to ensure that the test system is working
  */
