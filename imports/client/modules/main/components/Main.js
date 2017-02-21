@@ -51,9 +51,10 @@ export default function () {
 
           <div className="nav-right">
             <a href="#about">About</a>
+            {/* TODO: Fix these to work with meteor
             <a href="showcase">Showcase</a>
             <a href="cselabs">CSE Labs</a>
-            <a href="#events">Events</a>
+            <a href="#events">Events</a>*/}
             <a href="#team">Team</a>
             <a href="#contact">Contact</a>
           </div>
@@ -245,6 +246,40 @@ export default function () {
               >
               Facebook group</a> to stay up-to-date with our latest events!</p>
             </div>
+            <form
+              method="POST"
+              id="contact-form"
+              action="//formspree.io/csesucsd@gmail.com"
+            >
+              <div className="contact-name contact-field">
+                <label className="contact-label" htmlFor="name">Name *</label>
+                <input type="text" required="" name="name" id="name" />
+              </div>
+              <div className="contact-email contact-field">
+                <label className="contact-label" htmlFor="email">Email *</label>
+                <input type="email" required="" name="_replyto" id="email" />
+              </div>
+              <div className="contact-content contact-field">
+                <label
+                  className="contact-label"
+                  htmlFor="body"
+                >Message *</label>
+                <textarea
+                  className="contact-content"
+                  required=""
+                  name="body"
+                  id="body"
+                />
+                <input type="text" name="_gotcha" style={{ display: 'none' }} />
+              </div>
+              <div className="contact-submit contact-field">
+                <button className="contact-submit-btn">Submit!
+                  <i className="fa fa-paper-plane" />
+                </button>
+              </div>
+              <input type="hidden" name="_subject" value="CSES: New Message" />
+              <input type="hidden" name="_next" value="#" />
+            </form>
           </div>
         </section>
       </div>
