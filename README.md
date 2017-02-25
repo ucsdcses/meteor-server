@@ -29,3 +29,8 @@ We use SASS and follow the [Airbnb CSS Guidelines](https://github.com/airbnb/css
 
 [circleci]: https://circleci.com/gh/joelseq/polling-app
 [circleci-badge]: https://circleci.com/gh/joelseq/polling-app.svg?style=svg&circle-token=78bd6f6db6c6c128d0a1b7e862f4488df56cd127
+
+
+## Deployment
+If you are so lucky to have permissions to deploy the server on the cses machine, we follow the guide here for setup:
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
