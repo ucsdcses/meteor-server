@@ -1,4 +1,6 @@
+
 import React, { Component } from 'react';
+
 
 const $ = require('jquery');
 
@@ -13,7 +15,9 @@ export default class MainPage extends Component {
    * TODO: Separate this page out into components so that it is more modular,
    * but this will probably happen after a full redesign
    */
+
   componentDidMount() {
+
     // Cache selectors
     const nav = $('.nav-right-collapse, .nav-right');
     const navHeight = 60;
@@ -139,6 +143,7 @@ export default class MainPage extends Component {
   render() {
     // To satisfy lint checks, TODO: remove this
     this.foobar = '';
+
     return (
       <div>
         <div className="subscribe-overlay" />
@@ -153,8 +158,10 @@ export default class MainPage extends Component {
           >
             <div id="mc_embed_signup_scroll">
               <h5>Subscribe to CSES newsletter</h5>
+
               <label htmlFor="mce-EMAIL">Email</label>
               <input type="email" value="" name="EMAIL" id="mce-EMAIL" required />
+
               <input
                 type="submit"
                 value="Subscribe"
