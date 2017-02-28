@@ -34,3 +34,18 @@ We use SASS and follow the [Airbnb CSS Guidelines](https://github.com/airbnb/css
 ## Deployment
 If you are so lucky to have permissions to deploy the server on the cses machine, we follow the guide here for setup:
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
+
+To deploy onto the server, from your local git repo
+```bash
+meteor build --directory <BUILD DIR> --architecture os.linux.x86_32
+cd <BUILD DIRECTORY>
+tar -cvzf bundle.tar.gz bundle/
+scp bundle.tar.gz cses@cses.ucsd.edu:~/meteor-server
+ssh cses@cses.ucsd.edu
+cd ~/meteor-server
+tar -xvf bundle.tar.gz 
+cd bundle/programs/server/
+npm install
+sudo systemctl restart meteor-server
+
+```
