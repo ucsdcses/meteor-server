@@ -17,7 +17,6 @@ export default class MainPage extends Component {
    */
 
   componentDidMount() {
-
     // Cache selectors
     const nav = $('.nav-right-collapse, .nav-right');
     const navHeight = 60;
